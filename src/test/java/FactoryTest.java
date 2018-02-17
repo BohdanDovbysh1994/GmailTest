@@ -2,10 +2,10 @@ import businessobjects.GmailBO;
 import drivers.DriverObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 import properties.WebDriverProp;
+import testdata.DataProvider;
 import testdata.xmlmodels.LetterData;
 import testdata.xmlmodels.User;
 
@@ -14,11 +14,12 @@ public class FactoryTest {
     private User user;
 
 
-    @Factory(dataProviderClass = GmailTest.class, dataProvider = "getData")
+    @Factory(dataProviderClass = DataProvider.class, dataProvider = "getData")
     public FactoryTest(LetterData letterData, User user) {
         this.letterData = letterData;
         this.user = user;
     }
+
 
     @Test
     public void testGmail() {
@@ -31,8 +32,9 @@ public class FactoryTest {
         gmailBO.moveLetter();
         Assert.assertTrue(gmailBO.isMovedMessagePresent());
     }
+
     @AfterMethod
-    public void driverQuit(){
+    public void driverQuit() {
         DriverObject.releaseThread();
     }
 

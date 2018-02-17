@@ -11,7 +11,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LettersData {
     @XmlElement(name = "letterData", type = LetterData.class)
-    private List<LetterData> lettersData = null;
+    private List<LetterData> lettersData;
 
     public LettersData(){};
 

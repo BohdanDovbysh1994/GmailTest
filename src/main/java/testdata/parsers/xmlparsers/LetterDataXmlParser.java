@@ -1,4 +1,4 @@
-package testdata;
+package testdata.parsers.xmlparsers;
 
 import testdata.xmlmodels.LetterData;
 import testdata.xmlmodels.LettersData;
@@ -9,8 +9,9 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.List;
 
-public class LetterDataUnMarshaller {
-    public static List<LetterData> unmarsallerLetterDatas(File lettersDataFile) {
+public class LetterDataXmlParser {
+    public static List<LetterData> unmarsallerLetterDatas(String filePath) {
+        File lettersDataFile = new File(filePath);
         LettersData lettersData = null;
         JAXBContext context = null;
         try {

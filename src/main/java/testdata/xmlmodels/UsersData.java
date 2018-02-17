@@ -11,7 +11,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UsersData implements Serializable {
     @XmlElement(name = "user", type = User.class)
-    private List<User> userDataSet = null;
+    private List<User> userDataSet;
 
     public UsersData() {
     }

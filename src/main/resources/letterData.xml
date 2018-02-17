@@ -6,11 +6,6 @@
     <subject>Test1</subject>
     </letterData>
     <letterData>
-        <message>Test2</message>
-        <sentTo>dovbysh.bohdan@gmail.com</sentTo>
-        <subject>Test2</subject>
-    </letterData>
-    <letterData>
         <message>test3</message>
         <sentTo>homevorkvit@gmail.com</sentTo>
         <subject>test3</subject>

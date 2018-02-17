@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverObject {
     private static Map<Long, WebDriver> driverMap = new HashMap<>();
-    private static Semaphore semaphore = new Semaphore(3);
+    private static Semaphore semaphore = new Semaphore(1);
 
     private DriverObject() {
     }
