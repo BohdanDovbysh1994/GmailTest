@@ -2,6 +2,7 @@ package testdata.parsers;
 
 import org.apache.commons.io.FilenameUtils;
 import testdata.parsers.csvparsers.UserCsvParser;
+import testdata.parsers.xlsparsers.UserXlsParser;
 import testdata.parsers.xmlparsers.UserXmlParser;
 import testdata.xmlmodels.User;
 
@@ -15,6 +16,9 @@ public class UserParserFactory {
             }
             case "csv": {
                 return UserCsvParser.parseUserCsv(filePath);
+            }
+            case "xlsx": {
+                return UserXlsParser.parsUserXlsxFile(filePath);
             }
             default: {
                 throw new RuntimeException();
