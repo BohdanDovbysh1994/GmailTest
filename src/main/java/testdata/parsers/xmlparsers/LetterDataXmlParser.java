@@ -1,7 +1,7 @@
 package testdata.parsers.xmlparsers;
 
-import testdata.xmlmodels.LetterData;
-import testdata.xmlmodels.LettersData;
+import testdata.models.LetterData;
+import testdata.models.LettersData;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

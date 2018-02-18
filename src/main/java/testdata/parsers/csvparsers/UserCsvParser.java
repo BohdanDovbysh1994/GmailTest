@@ -1,6 +1,6 @@
 package testdata.parsers.csvparsers;
 
-import testdata.xmlmodels.User;
+import testdata.models.User;
 
 import java.io.*;
 import java.util.ArrayList;

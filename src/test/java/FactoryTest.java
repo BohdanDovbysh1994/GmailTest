@@ -6,8 +6,8 @@ import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 import properties.WebDriverProp;
 import testdata.DataProvider;
-import testdata.xmlmodels.LetterData;
-import testdata.xmlmodels.User;
+import testdata.models.LetterData;
+import testdata.models.User;
 
 public class FactoryTest {
     private LetterData letterData;

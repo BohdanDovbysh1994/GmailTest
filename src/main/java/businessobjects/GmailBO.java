@@ -2,8 +2,8 @@ package businessobjects;
 
 import businessobjects.pagepatternclasses.GmailPage;
 import businessobjects.pagepatternclasses.LoginPage;
-import testdata.xmlmodels.LetterData;
-import testdata.xmlmodels.User;
+import testdata.models.LetterData;
+import testdata.models.User;
 
 public class GmailBO {
     private LoginPage loginPage;

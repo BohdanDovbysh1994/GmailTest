@@ -2,8 +2,8 @@ package testdata;
 
 import testdata.parsers.LetterParserFactory;
 import testdata.parsers.UserParserFactory;
-import testdata.xmlmodels.LetterData;
-import testdata.xmlmodels.User;
+import testdata.models.LetterData;
+import testdata.models.User;
 
 import java.util.List;
 

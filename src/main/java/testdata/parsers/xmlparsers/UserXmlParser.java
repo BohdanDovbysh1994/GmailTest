@@ -1,15 +1,11 @@
 package testdata.parsers.xmlparsers;
 
-import testdata.xmlmodels.User;
-import testdata.xmlmodels.UsersData;
+import testdata.models.User;
+import testdata.models.UsersData;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
 public class UserXmlParser {

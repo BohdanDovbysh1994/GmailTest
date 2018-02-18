@@ -5,7 +5,7 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import testdata.models.User;
+import testdata.models.LetterData;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserXlsParser {
-    public static List<User> parsUserXlsxFile(String filePath)  {
+public class LetterXlsParser {
+    public static List<LetterData> parsLetterXlsx(String filePath){
         FileInputStream file = null;
         try {
             file = new FileInputStream(new File(filePath));
@@ -30,26 +30,24 @@ public class UserXlsParser {
             e.printStackTrace();
         }
         XSSFSheet currentSheet = workbook.getSheetAt(0);
-
-        List<User> users = new ArrayList<>();
+        List<LetterData> letterDatas = new ArrayList<>();
         DataFormatter formatter = new DataFormatter();
 
         for (int i = currentSheet.getFirstRowNum() + 1; i <= currentSheet.getLastRowNum(); i++) {
-            User user = new User();
+            LetterData letterData = new LetterData();
             Row currentRow = currentSheet.getRow(i);
             for (int j = currentRow.getFirstCellNum(); j <= currentRow.getLastCellNum(); j++) {
                 Cell currentCell = currentRow.getCell(j);
                 if (j == 0) {
-                    user.setLogin(formatter.formatCellValue(currentCell));
+                   letterData.setSubject(formatter.formatCellValue(currentCell));
                 } else if (j == 1) {
-                    user.setPassword(formatter.formatCellValue(currentCell));
+                   letterData.setSentTo(formatter.formatCellValue(currentCell));
+                } else if (j == 3){
+                 letterData.setMessage(formatter.formatCellValue(currentCell));
                 }
             }
-            users.add(user);
+            letterDatas.add(letterData);
         }
-        return users;
+        return letterDatas;
     }
 }
-
-
-

@@ -6,7 +6,7 @@ import businessobjects.pagepatternclasses.decorator.elements.elements.LabelImpl;
 import businessobjects.pagepatternclasses.decorator.elements.elements.TextInputImpl;
 import businessobjects.pagepatternclasses.decorator.elements.handlers.MyPageFactory;
 import org.openqa.selenium.support.FindBy;
-import testdata.xmlmodels.LetterData;
+import testdata.models.LetterData;
 
 public class GmailPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='T-I J-J5-Ji T-I-KE L3']")

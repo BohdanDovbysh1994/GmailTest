@@ -4,7 +4,7 @@ import org.apache.commons.io.FilenameUtils;
 import testdata.parsers.csvparsers.UserCsvParser;
 import testdata.parsers.xlsparsers.UserXlsParser;
 import testdata.parsers.xmlparsers.UserXmlParser;
-import testdata.xmlmodels.User;
+import testdata.models.User;
 
 import java.util.List;
 
