@@ -17,6 +17,9 @@ public class UserParserFactory {
             case "csv": {
                 return UserCsvParser.parseUserCsv(filePath);
             }
+            case "xls" :{
+                return UserXlsParser.parsUserXlsxFile(filePath);
+            }
             case "xlsx": {
                 return UserXlsParser.parsUserXlsxFile(filePath);
             }
