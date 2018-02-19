@@ -5,10 +5,12 @@ import businessobjects.pagepatternclasses.decorator.elements.elements.CheckBoxIm
 import businessobjects.pagepatternclasses.decorator.elements.elements.LabelImpl;
 import businessobjects.pagepatternclasses.decorator.elements.elements.TextInputImpl;
 import businessobjects.pagepatternclasses.decorator.elements.handlers.MyPageFactory;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.support.FindBy;
 import testdata.models.LetterData;
 
 public class GmailPage extends AbstractPage {
+    private final static Logger LOGGER = Logger.getLogger(GmailPage.class);
     @FindBy(xpath = "//div[@class='T-I J-J5-Ji T-I-KE L3']")
     private ButtonImpl composeButton;
     @FindBy(xpath = "//textarea[@class='vO']")
@@ -42,6 +44,8 @@ public class GmailPage extends AbstractPage {
         subjectInput.sendKeys(letterData.getSubject());
         messageInput.sendKeys(letterData.getMessage());
         sendButton.click();
+        LOGGER.info(String.format("User sent message"));
+
     }
 
     public boolean isMessageSent() {
@@ -50,16 +54,20 @@ public class GmailPage extends AbstractPage {
 
     public void getSentPage() {
         sentPage.click();
+        LOGGER.info(String.format("User get sent page"));
     }
 
     public void removeLetterFromSend() {
         choosenMail.click();
+        LOGGER.info("User choose sent letter");
         deleteButton.click();
+        LOGGER.info("User click delete button");
     }
 
     public void pushDeleteOkButton() {
         waitUntilBeClickableAbstract(deleteOkButton);
         deleteOkButton.click();
+        LOGGER.info("User delete message");
     }
 
     public boolean isMovedMessagePresent() {
