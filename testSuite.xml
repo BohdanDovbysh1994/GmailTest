@@ -10,7 +10,8 @@
     </listeners>
     <test name="GmailTest" parallel="instances">
         <classes>
-            <class name="FactoryTest" />
+            <class name="FactoryTest"/>
+            <class name="FailedTest"/>
         </classes>
     </test>
 </suite>

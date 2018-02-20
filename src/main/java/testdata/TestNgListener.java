@@ -15,6 +15,7 @@ public class TestNgListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
         LOGGER.info(String.format("Test %s success", iTestResult.getName()));
+
     }
 
     @Override
